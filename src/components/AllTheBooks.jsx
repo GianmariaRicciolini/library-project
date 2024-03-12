@@ -16,7 +16,7 @@ function AllTheBooks() {
                 variant="top"
                 src={book.img}
                 alt={book.title}
-                style={{ objectFit: "cover", height: "50%", width: "100%" }}
+                style={{ objectFit: "contain", height: "50%", width: "100%" }}
               />
               <Card.Body>
                 <Card.Title style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
