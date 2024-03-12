@@ -8,13 +8,20 @@ import Row from "react-bootstrap/Row";
 function AllTheBooks() {
   return (
     <Container fluid>
-      <Row>
+      <Row className="gy-3">
         {fantasy.map((book, index) => (
-          <Col>
-            <Card key={index} style={{ width: "18rem", height: "" }}>
-              <Card.Img variant="top" src={book.img} alt={book.title} />
+          <Col xs={6} md={4} lg={3} xl={2} key={index}>
+            <Card style={{ height: "20rem" }}>
+              <Card.Img
+                variant="top"
+                src={book.img}
+                alt={book.title}
+                style={{ objectFit: "cover", height: "50%", width: "100%" }}
+              />
               <Card.Body>
-                <Card.Title>{book.title}</Card.Title>
+                <Card.Title style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  {book.title}
+                </Card.Title>
                 <Card.Text>
                   <strong>Price:</strong> {book.price}$
                 </Card.Text>
