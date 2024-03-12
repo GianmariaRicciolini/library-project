@@ -7,7 +7,7 @@ import AllTheBooks from "./components/AllTheBooks";
 
 function App() {
   return (
-    <body>
+    <div>
       <header>
         <MyNav />
       </header>
@@ -16,7 +16,7 @@ function App() {
       <footer>
         <MyFooter />
       </footer>
-    </body>
+    </div>
   );
 }
 

@@ -9,15 +9,15 @@ function AllTheBooks() {
   return (
     <Container fluid>
       <Row className="gy-3">
-        {fantasy.map((book, index) => (
-          <Col xs={6} md={4} lg={3} xl={2} key={index}>
+        {fantasy.map((book) => (
+          <Col xs={6} md={4} lg={3} xl={2} key={book.asin}>
             <Card style={{ height: "20rem" }}>
               <Card.Img
                 variant="top"
                 src={book.img}
                 alt={book.title}
                 className="pt-1"
-                style={{ objectFit: "contain", height: "50%", width: "100%" }}
+                style={{ objectFit: "contain", height: "50%" }}
               />
               <Card.Body>
                 <Card.Title style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
