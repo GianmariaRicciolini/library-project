@@ -16,6 +16,7 @@ function AllTheBooks() {
                 variant="top"
                 src={book.img}
                 alt={book.title}
+                className="pt-1"
                 style={{ objectFit: "contain", height: "50%", width: "100%" }}
               />
               <Card.Body>
