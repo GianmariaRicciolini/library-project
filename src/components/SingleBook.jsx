@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 
@@ -20,7 +20,7 @@ class SingleBook extends Component {
 
     return (
       <Col sm={6} lg={4} xl={3} key={asin}>
-        <Card className="m-auto" style={{ height: "fit-content", width: "300px" }}>
+        <Card className="m-auto shadow" style={{ height: "fit-content", width: "300px" }}>
           <Card.Img
             variant="top"
             src={img}
@@ -46,6 +46,8 @@ class SingleBook extends Component {
   }
 }
 
+export default SingleBook;
+
 // function SingleBook(props) {
 //   return (
 //     <Col sm={6} lg={4} xl={3} key={props.asin}>
@@ -66,5 +68,3 @@ class SingleBook extends Component {
 //     </Col>
 //   );
 // }
-
-export default SingleBook;
