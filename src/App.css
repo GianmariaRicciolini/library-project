@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* css libreria */
+
+.selected-card {
+  border: 5px solid rgb(4, 198, 40);
+}
