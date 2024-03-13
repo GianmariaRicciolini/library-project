@@ -10,23 +10,19 @@ function AllTheBooks() {
     <Container fluid>
       <Row className="gy-3">
         {fantasy.map((book) => (
-          <Col xs={6} md={4} lg={3} xl={2} key={book.asin}>
-            <Card style={{ height: "20rem" }}>
-              <Card.Img
-                variant="top"
-                src={book.img}
-                alt={book.title}
-                className="pt-1"
-                style={{ objectFit: "contain", height: "50%" }}
-              />
-              <Card.Body>
+          <Col sm={6} lg={4} xl={3} key={book.asin}>
+            <Card className="m-auto" style={{ height: "fit-content", width: "300px" }}>
+              <Card.Img variant="top" src={book.img} alt={book.title} style={{ objectFit: "cover", height: "400px" }} />
+              <Card.Body className="d-flex flex-column justify-content-around">
                 <Card.Title style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   {book.title}
                 </Card.Title>
                 <Card.Text>
                   <strong>Price:</strong> {book.price}$
                 </Card.Text>
-                <Button variant="success">Buy Now</Button>
+                <Button className="w-50" variant="success">
+                  Buy Now
+                </Button>
               </Card.Body>
             </Card>
           </Col>
