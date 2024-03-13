@@ -34,7 +34,9 @@ class SingleBook extends Component {
               {title}
             </Card.Title>
             <Card.Text>
-              <strong>Price:</strong> {price}$
+              <p>
+                <span className="fw-bold">Price:</span> {price}$
+              </p>
             </Card.Text>
             {/* <Button className="w-50" variant="success">
               Buy Now

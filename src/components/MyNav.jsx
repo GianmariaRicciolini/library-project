@@ -6,7 +6,7 @@ function MyNav() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#home">Nav-Bar</Navbar.Brand>
+        <Navbar.Brand href="#home">MyBooks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
