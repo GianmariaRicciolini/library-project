@@ -7,8 +7,8 @@ function MyNav() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#home">MyBooks</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle />
+        <Navbar.Collapse>
           <Nav className="me-auto">
             <Nav.Link href="#">Home</Nav.Link>
             <Nav.Link href="#">About</Nav.Link>

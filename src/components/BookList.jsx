@@ -8,14 +8,19 @@ import Form from "react-bootstrap/Form";
 class BookList extends Component {
   state = {
     searchName: "",
+    selectedBookId: null,
   };
 
   handleSearch = (e) => {
     this.setState({ searchName: e.target.value });
   };
 
+  handleBookSelection = (id) => {
+    this.setState({ selectedBookId: id });
+  };
+
   render() {
-    const { searchName } = this.state;
+    const { searchName, selectedBookId } = this.state; // equivale a this.state.searchName con l'uso delle graffe stiamo estraendo e assegnando il valore searchName, da state alla nostra costante
     const filteredBooks = fantasy.filter((book) => book.title.toLowerCase().includes(searchName.toLowerCase()));
 
     return (
@@ -34,11 +39,13 @@ class BookList extends Component {
           {filteredBooks.map((book) => (
             <SingleBook
               key={book.asin}
-              asin={book.asin}
               title={book.title}
               img={book.img}
               price={book.price}
               category={book.category}
+              id={book.asin}
+              isSelected={book.asin === selectedBookId}
+              onBookSelect={this.handleBookSelection}
             />
           ))}
         </Row>
